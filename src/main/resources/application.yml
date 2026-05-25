@@ -1,0 +1,20 @@
+#file: noinspection YAMLSchemaValidation
+spring:
+  application:
+    name: anumc_website
+  datasource:
+    url: jdbc:postgresql://localhost:5432/local_dev_db
+#    TODO this should be db but doesn't work
+    username: dev_user
+    password: password123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
