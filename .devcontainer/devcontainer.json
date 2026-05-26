@@ -10,6 +10,7 @@
     "jetbrains" : {
       "backend" : "IntelliJ",
       "settings" : {
+        "com.intellij:app:BaseRefactoringSettings.safe_delete_when_delete": false
         // IDE settings can be added via “Show context actions”|“Add currently modified settings from IDE”.
         // A complete list of supported settings is also available through auto-completion
       },
@@ -29,6 +30,6 @@
     // Add additional features to your project using auto-completion.
   },
   // Comment out to connect as the root user.
-  "updateRemoteUserUID": true
-  //  forwardPorts: []
+  "updateRemoteUserUID": true,
+  "forwardPorts": [8080]
 }
